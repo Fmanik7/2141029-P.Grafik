@@ -12,14 +12,14 @@ if (!gl) {
 
 
 // bersihkan layer dengan warna hitam
-gl.clearColor(0, 0, 1, 1); // Updated alpha value to 1
+gl.clearColor(0, 1, 1, 1); // Updated alpha value to 1
 gl.clear(gl.COLOR_BUFFER_BIT);
 
 // membuat data titik garis
 const points = [
- -0.3, 0.5, //Titik Awal
- -0.6, 0.3, //Titik Akhir 
- 0.2, 0.4,
+  0.5, 0.0,
+  0.5, 0.0,
+  0.0, 0.5,
 
 
 ];
@@ -75,4 +75,4 @@ gl.enableVertexAttribArray(positionAttributeLocation);
 gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
 
 // Menggambar titik
-gl.drawArrays(gl.TRIANGLES, 0, 3); // Updated the number of points to draw
+gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); // Updated the number of points to draw
