@@ -17,7 +17,8 @@ canvas.height = canvasHeight;
 gl.viewport(0, 0, canvas.width, canvas.height);
 
 // Warna canvas
-gl.clearColor(0.4343, 0.2422, 0.3343, 1.0);
+gl.clearColor(0, 0, 0, 1); // Warna hitam
+
 gl.clear(gl.COLOR_BUFFER_BIT);
 
 // Vertex shader source
@@ -89,9 +90,9 @@ function drawTriangle(rotationAngle, translation, scale, color) {
 }
 
 var solidColors = [
-  [0.0, 0.5, 1.0, 1.0], // Biru solid
-  [0.0, 1.0, 0.0, 1.0], // Hijau solid
-];
+    [0.0, 0.5, 0.0, 1.0], // Hijau pekat
+    [0.0, 0.0, 0.5, 1.0], // Biru navy
+  ];  
 
 var rotationAngle = 0;
 
